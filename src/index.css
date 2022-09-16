@@ -66,10 +66,20 @@ button:focus {
   background: rgb(184, 184, 184);
 }
 
+.freezing {
+  background: rgb(218, 218, 255);
+}
 .cold {
   background: #035aa6;
 }
-
-.hot {
-  background: #ff5200;
+.warm {
+  background: rgb(100, 255, 65);
 }
+.hot {
+  background: #ffaa00;
+}
+.roasting {
+  background: #ff0000;
+}
+
+
