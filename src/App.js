@@ -1,9 +1,15 @@
-import './App.css';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
+    <div className="App-Container">
+      <div className='Temp-Container'>
+        <div className='Temp-Display'>10°C</div>
+      </div>
+      <div className='Button-Container'>
+        <button>+</button>
+        <button>-</button>
+      </div>
     </div>
   );
 }
