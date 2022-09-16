@@ -6,6 +6,9 @@ function App() {
   const [color, setColor] = useState("freezing");
 
   const Increase = () => {
+
+    if (count === 50) return;
+
     const newTemp = count + 1;
     setCount(newTemp);
 
@@ -22,16 +25,19 @@ function App() {
     }
   };
   const Decrease = () => {
+
+    if (count === -10 ) return;
+
     const newTemp = count - 1;
     setCount(newTemp);
 
     if (newTemp <= 0) {
       setColor("freezing");
-    } else if (newTemp <= 10) {
+    } else if (newTemp < 10) {
       setColor("cold");
-    } else if (newTemp <= 20) {
+    } else if (newTemp < 20) {
       setColor("warm");
-    } else if (newTemp <= 40) {
+    } else if (newTemp < 40) {
       setColor("hot");
     } else {
       setColor("roasting");
