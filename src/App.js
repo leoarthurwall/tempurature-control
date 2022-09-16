@@ -5,13 +5,16 @@ function App() {
   const [count, setCount] = useState(-5);
   const [color, setColor] = useState("freezing");
 
+  //function that runs when increase button is clicked
   const Increase = () => {
-
+    //limits the max count to 50
     if (count === 50) return;
 
+    //create a variable for the count change
     const newTemp = count + 1;
     setCount(newTemp);
 
+    //if else statement to change color depending on tempurature
     if (newTemp >= 40) {
       setColor("roasting");
     } else if (newTemp >= 20) {
@@ -24,13 +27,17 @@ function App() {
       setColor("freezing");
     }
   };
+
+  //function that runs when decrease button is clicked
   const Decrease = () => {
+    //limits the min count to -10
+    if (count === -10) return;
 
-    if (count === -10 ) return;
-
+    //create a variable for the count change
     const newTemp = count - 1;
     setCount(newTemp);
 
+    //if else statement to change color depending on tempurature
     if (newTemp <= 0) {
       setColor("freezing");
     } else if (newTemp < 10) {
